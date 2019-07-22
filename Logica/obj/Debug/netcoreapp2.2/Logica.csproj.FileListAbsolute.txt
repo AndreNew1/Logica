@@ -1,0 +1,11 @@
+C:\Users\Treinamento 2\source\repos\Logica\Logica\bin\Debug\netcoreapp2.2\Logica.deps.json
+C:\Users\Treinamento 2\source\repos\Logica\Logica\bin\Debug\netcoreapp2.2\Logica.runtimeconfig.json
+C:\Users\Treinamento 2\source\repos\Logica\Logica\bin\Debug\netcoreapp2.2\Logica.runtimeconfig.dev.json
+C:\Users\Treinamento 2\source\repos\Logica\Logica\bin\Debug\netcoreapp2.2\Logica.dll
+C:\Users\Treinamento 2\source\repos\Logica\Logica\obj\Debug\netcoreapp2.2\Logica.csprojAssemblyReference.cache
+C:\Users\Treinamento 2\source\repos\Logica\Logica\obj\Debug\netcoreapp2.2\Logica.csproj.CoreCompileInputs.cache
+C:\Users\Treinamento 2\source\repos\Logica\Logica\obj\Debug\netcoreapp2.2\Logica.AssemblyInfoInputs.cache
+C:\Users\Treinamento 2\source\repos\Logica\Logica\obj\Debug\netcoreapp2.2\Logica.AssemblyInfo.cs
+C:\Users\Treinamento 2\source\repos\Logica\Logica\bin\Debug\netcoreapp2.2\Logica.pdb
+C:\Users\Treinamento 2\source\repos\Logica\Logica\obj\Debug\netcoreapp2.2\Logica.dll
+C:\Users\Treinamento 2\source\repos\Logica\Logica\obj\Debug\netcoreapp2.2\Logica.pdb
