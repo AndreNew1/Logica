@@ -8,10 +8,13 @@ namespace Logica
     {
         public void Tela(List<CEP> BuscaCep)
         {
+            int sa=0;
             //Define as paginas
-            Console.WriteLine("Digite o numero de elementos por pagina");
-            int.TryParse(Console.ReadLine(), out int sa);
-            if (sa == 0) { sa = 1; }
+            while (sa <= 0 || sa > BuscaCep.Count)
+            {
+                Console.WriteLine("Digite o numero de elementos por pagina");
+                int.TryParse(Console.ReadLine(), out sa);
+            }
             //Quantidade de paginas
             int resu = BuscaCep.Count / sa;
             //Caso numero quebrar
