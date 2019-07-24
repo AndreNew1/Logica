@@ -12,10 +12,8 @@ namespace Logica
         static async Task Main(string[] args)
         {
             Show show = new Show();
-            string s="s";
             List<CEP> BuscaCep = new List<CEP>();
             string path = @"C:\Users\Treinamento 2\Documents\Ceps.txt";
-
             try
             {
                 using (StreamReader an = File.OpenText(path))
@@ -34,9 +32,10 @@ namespace Logica
                 Console.WriteLine(e.Message);
             }
             Console.WriteLine("CEPs Cadastrados: " + BuscaCep.Count);
-            show.Tela(BuscaCep,s);
-           
-
+            show.Tela(BuscaCep);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nTermino");
+            Console.ResetColor();
         }
         static async Task<string> Http(string Rest)
         {

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Logica
 {
-    class CEP
+    class CEP 
     {
         public string Cep { get; set; }
         public string Logradouro { get; set; }
@@ -18,7 +18,7 @@ namespace Logica
         public override string ToString()
         {
             return Cep + "," + Logradouro + ","  +
-                Bairro + "," + Uf;
+                Bairro + "," + Uf+","+Data.ToString("dd/MM/yyyy HH:mm:ss");
         }
     }
 }

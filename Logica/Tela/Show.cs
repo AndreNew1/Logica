@@ -6,45 +6,55 @@ namespace Logica
 {
     class Show
     {
-        public void Tela(List<CEP> BuscaCep,string s)
+        public void Tela(List<CEP> BuscaCep)
         {
             //Define as paginas
             Console.WriteLine("Digite o numero de elementos por pagina");
-            int sa = Convert.ToInt32(Console.ReadLine());
+            int.TryParse(Console.ReadLine(), out int sa);
+            if (sa == 0) { sa = 1; }
             //Quantidade de paginas
             int resu = BuscaCep.Count / sa;
             //Caso numero quebrar
             if (BuscaCep.Count % sa != 0) { resu += 1; }
+            int Lis = 0;
             //Imprime as paginas
-            while (s == "s")
+            TelaPaginas(resu,sa, BuscaCep,Lis);
+        }
+        public void TelaPaginas(int resu,int sa,List<CEP>BuscaCep,int Lis)
+        {
+            string s="0";
+            if (resu != 0)
             {
-                if (resu != 0)
+                Console.Write("Paginas:");
+                for (int i = 0; i < resu; i++)
                 {
-                    for (int i = 0; i < resu; i++)
-                    {
-                        Console.WriteLine($"Digite {i + 1} para pagina{i + 1}");
-                    }
-                    int.TryParse(Console.ReadLine(), out int Lis);
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    if (Lis - 1 == i) { Console.ForegroundColor = ConsoleColor.Green; }
+                    Console.Write($"|{i + 1}|");
+                }
+                Console.WriteLine("\nOu Digite n para sair");
+                Console.ResetColor();
+                s = Console.ReadLine().ToLower().Trim();
+                if (s != "n")
+                {
+                    int.TryParse(s, out  Lis);
                     Console.WriteLine();
-                    if (Lis <= 0 || Lis > resu)
-                    {
-                        Console.WriteLine("Digite uma pagina valida");
-                    }
+                    //Validação das paginas
+                    if (Lis <= 0 || Lis > resu) { Console.WriteLine("Digite uma pagina valida"); }
                     else
-                    {
+                    {   //Definição da pagina
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Blue;
                         var Pagina = BuscaCep.OrderBy(x => x.Uf).ThenBy(x => x.Data).Skip((Lis - 1) * sa).Take(sa).ToList();
                         Print(Pagina);
+                        Console.ResetColor();
                     }
+                    TelaPaginas(resu, sa, BuscaCep,Lis);
                 }
-                else { Console.WriteLine("Não ha CEPs"); }
-                do
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("Deseja ver outra pagina?(s/n)");
-                    s = Console.ReadLine().ToLower().Trim();
-                } while (s != "s" && s != "n");
             }
+            else { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Não ha CEPs"); }
         }
+        //Impressão 
         static void Print(List<CEP> s)
         {
             foreach (var a in s)

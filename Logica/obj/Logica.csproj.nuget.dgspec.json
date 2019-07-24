@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Treinamento 2\\source\\repos\\Logica\\Logica\\Logica.csproj": {}
+    "C:\\Users\\Treinamento 2\\Desktop\\Logica\\Logica\\Logica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Treinamento 2\\source\\repos\\Logica\\Logica\\Logica.csproj": {
+    "C:\\Users\\Treinamento 2\\Desktop\\Logica\\Logica\\Logica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Treinamento 2\\source\\repos\\Logica\\Logica\\Logica.csproj",
+        "projectUniqueName": "C:\\Users\\Treinamento 2\\Desktop\\Logica\\Logica\\Logica.csproj",
         "projectName": "Logica",
-        "projectPath": "C:\\Users\\Treinamento 2\\source\\repos\\Logica\\Logica\\Logica.csproj",
+        "projectPath": "C:\\Users\\Treinamento 2\\Desktop\\Logica\\Logica\\Logica.csproj",
         "packagesPath": "C:\\Users\\Treinamento 2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Treinamento 2\\source\\repos\\Logica\\Logica\\obj\\",
+        "outputPath": "C:\\Users\\Treinamento 2\\Desktop\\Logica\\Logica\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
